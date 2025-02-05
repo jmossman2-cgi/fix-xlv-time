@@ -1,13 +1,13 @@
 #!/bin/sh
-SYSTEM_TIME_FILE="/usr/local/brivo/system_time"
+SYSTEM_TIME_FILE="./system_time"
 
 echo "Starting system time: $(date)"
 
 echo "Checking system time file..."
-if [[ -f "$SYSTEM_TIME_FILE" ]] ; then
-    echo "system_time file missing!"
-else
+if [ -f "$SYSTEM_TIME_FILE" ] ; then
     echo "system_time file: $(cat ${SYSTEM_TIME_FILE})"
+else
+    echo "system_time file missing!"
 fi
 
 echo "Fetching time from google..."
