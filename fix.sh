@@ -1,5 +1,5 @@
 #!/bin/sh
-SYSTEM_TIME_FILE="./system_time"
+SYSTEM_TIME_FILE="/usr/local/brivo/system_time"
 
 echo "Starting system time: $(date)"
 
