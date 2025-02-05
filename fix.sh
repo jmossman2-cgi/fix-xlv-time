@@ -1,5 +1,5 @@
 #!/bin/sh
-SYSTEM_TIME_FILE="/usr/local/brivo/system_time"
+SYSTEM_TIME_FILE="./system_time"
 
 echo "Starting system time: $(date)"
 
@@ -23,7 +23,7 @@ date -u -D "%a, %d %b %Y %H:%M:%S GMT" "$date_from_google"
 
 echo "Setting system time file..."
 new_time=$(date -u +"%Y %m %d %H %M %S %s")
-echo -n $new_time > $SYSTEM_TIME_FILE
+echo -n "${new_time}" > $SYSTEM_TIME_FILE
 
 echo "Final system time: $(date)"
 echo "Final system time file: $(cat ${SYSTEM_TIME_FILE})"
